@@ -1,0 +1,19 @@
+.navbar-nav {
+  margin-top: 10px; /* увеличить отступ сверху */
+}
+
+.navbar-nav li {
+  margin-right: 20px; /* увеличить отступ между элементами */
+  margin-left: 20px; /* увеличить отступ между элементами */
+}
+
+.navbar-nav.mx-auto {
+  display: flex;
+  justify-content: center; /* отцентровать элементы */
+  width: 100%; /* развернуть элементы на всю ширину */
+}
+.container-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
