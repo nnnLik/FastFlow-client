@@ -1,4 +1,5 @@
-# fastflow
+# FastFlow
+[Server](https://github.com/nnnLik/FastFlow-server)
 
 ## Project setup
 ```
