@@ -5,7 +5,7 @@
         <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-12 col-md-8 col-lg-6 col-xl-5">
             <div class="card bg-dark text-white" style="border-radius: 1rem">
-              <div class="card-body p-5 text-center">
+              <form class="card-body p-5 text-center" @submit="login">
                 <div class="mb-md-5 mt-md-4 pb-5">
                   <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
                   <p class="text-white-50 mb-5">
@@ -14,19 +14,21 @@
 
                   <div class="form-outline form-white mb-4">
                     <input
-                      type="email"
-                      id="typeEmailX"
+                      type="text"
+                      id="loginEmail"
                       class="form-control form-control-lg"
                       placeholder="Email"
+                      v-model="loginEmail"
                     />
                   </div>
 
                   <div class="form-outline form-white mb-4">
                     <input
                       type="password"
-                      id="typePasswordX"
+                      id="loginPassword"
                       class="form-control form-control-lg"
                       placeholder="Password"
+                      v-model="loginPassword"
                     />
                   </div>
 
@@ -64,7 +66,7 @@
                     >
                   </p>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
         </div>
@@ -74,9 +76,33 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
-  name: "ff-login",
-  import: "../../assets/styles/main.scss",
+  name: "LoginForm",
+  data() {
+    return {
+      loginEmail: "",
+      loginPassword: "",
+    };
+  },
+  methods: {
+    async login(event) {
+      event.preventDefault();
+      try {
+        const response = await axios.post(
+          "https://c482-46-53-248-45.eu.ngrok.io/auth/login",
+          {
+            email: this.loginEmail,
+            password: this.loginPassword,
+          }
+        );
+        console.log(response.data);
+      } catch (error) {
+        console.error(error);
+      }
+    },
+  },
 };
 </script>
 
