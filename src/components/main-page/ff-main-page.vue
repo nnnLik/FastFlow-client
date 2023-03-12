@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="ff-main-page">
     <div style="background-color: #333; color: #fff; padding: 50px">
       <div style="max-width: 800px; margin: 0 auto">
         <div
@@ -139,11 +139,18 @@
 
 <script>
 export default {
-  name: "MainPage",
-  import: "../assets/css/mainPage.css",
+  name: "ff-main-page",
+  import: "../../assets/styles/main.scss",
+  data() {
+    return {};
+  },
+  computed: {},
+  methods: {},
+  watch: {},
+  // }
 };
 </script>
 
-<style scoped>
+<style>
 @import "~bootstrap/dist/css/bootstrap.css";
 </style>
