@@ -1,30 +1,20 @@
 <template>
-  <div>
-    <nav-bar></nav-bar>
-  </div>
-  <div>
-    <MainPage></MainPage>
-  </div>
-  <div>
-    <FooterMain></FooterMain>
+  <div id="app">
+    <ffMainWrapper />
   </div>
 </template>
 
 <script>
-import NavBar from "./components/navBar.vue";
-import MainPage from "./components/mainPage.vue";
-import FooterMain from "./components/footerMain.vue";
+import ffMainWrapper from "./components/ff-main-wrapper.vue";
 
 export default {
   name: "App",
   components: {
-    NavBar,
-    MainPage,
-    FooterMain,
+    ffMainWrapper,
   },
 };
 </script>
 
-<style scoped>
+<style>
 @import "~bootstrap/dist/css/bootstrap.css";
 </style>
