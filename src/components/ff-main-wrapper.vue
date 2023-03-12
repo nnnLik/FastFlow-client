@@ -1,7 +1,9 @@
 <template>
   <div class="ff-main-wrapper">
     <ffNavigateBar />
-    <router-view />
+    <div>
+      <router-view />
+    </div>
     <ffFooter />
   </div>
 </template>
@@ -9,13 +11,11 @@
 <script>
 import ffNavigateBar from "./layouts/ff-navigate-bar.vue";
 import ffFooter from "./layouts/ff-footer.vue";
-// import ffMainPage from "./main-page/ff-main-page.vue";
 
 export default {
   name: "v-main-wrapper",
   components: {
     ffNavigateBar,
-    // ffMainPage,
     ffFooter,
   },
   props: {},
