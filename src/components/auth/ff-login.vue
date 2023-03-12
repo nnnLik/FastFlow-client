@@ -98,9 +98,13 @@ export default {
           }
         );
         console.log(response.data);
+        this.setLogined(response.data.token);
       } catch (error) {
         console.error(error);
       }
+    },
+    setLogined(token) {
+      console.log(token);
     },
   },
 };
